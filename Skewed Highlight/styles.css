@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap");
+
+:root {
+	/* Colors */
+	--bg: #ffffe0;
+	--font: #ffffff;
+	--mark: #6600ff;
+
+	/* Skew */
+	--mark-skew: 0.25em;
+	--mark-height: 85%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Noto Sans", sans-serif;
+	background-color: var(--bg);
+}
+
+h1 {
+	max-width: 18ch;
+	line-height: 1.25;
+	font-size: 8vmin;
+}
+
+mark {
+	padding-inline: 0.3em;
+	margin-inline: -0.3em;
+	color: var(--font);
+
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	background-color: transparent;
+	background-image: linear-gradient(to bottom right, transparent 0 50%, var(--mark) 50% 100%), linear-gradient(to right, var(--mark), var(--mark)),
+		linear-gradient(to top left, transparent 0 50%, var(--mark) 50% 100%);
+	background-size: var(--mark-skew) var(--mark-height), calc(100% - var(--mark-skew) * 2) var(--mark-height), var(--mark-skew) var(--mark-height);
+	background-position: 0 50%, 50% 50%, 100% 50%;
+	background-repeat: no-repeat;
+}
