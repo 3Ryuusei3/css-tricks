@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(241, 253, 255);
+	font-family: sans-serif;
+}
+
+svg {
+	position: absolute;
+}
+
+h1 {
+	font-size: 3rem;
+	position: relative;
+}
+
+h1:before {
+	content: attr(data-text);
+	position: absolute;
+	filter: url(#motion-blur);
+	opacity: 0.7;
+}
