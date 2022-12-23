@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(255, 255, 241);
+}
+
+svg {
+	position: absolute;
+}
+
+main {
+	width: 30%;
+	filter: url(#distort);
+}
