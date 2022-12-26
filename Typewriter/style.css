@@ -1,0 +1,47 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--bg: #f2f2ff;
+
+	/* Font size */
+	--fs-lg: 2rem;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--bg);
+	font-family: monospace;
+	font-size: var(--fs-lg);
+	color: var(--slake);
+}
+
+.typewriter {
+	color: #0000;
+	background: linear-gradient(-90deg, var(--slake) 3px, #0000 0) 10px 0, linear-gradient(var(--slake) 0 0) 0 0;
+	background-size: calc(var(--n) * 1ch) 200%;
+	-webkit-background-clip: padding-box, text;
+	background-clip: padding-box, text;
+	background-repeat: no-repeat;
+	animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.3s) steps(var(--n)) forwards;
+}
+
+@keyframes t {
+	from {
+		background-size: 0 200%;
+	}
+}
+@keyframes b {
+	50% {
+		background-position: 0 -100%, 0 0;
+	}
+}
