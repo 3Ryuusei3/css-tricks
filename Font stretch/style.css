@@ -21,7 +21,7 @@ body {
 
 h1 {
 	--stretch-multiplier: 4;
-	font-size: clamp(2rem, 14vmin, 8rem);
+	font-size: clamp(1.5rem, 14vmin, 7rem);
 	font-family: "Montserrat", sans-serif;
 	text-transform: uppercase;
 	display: grid;
