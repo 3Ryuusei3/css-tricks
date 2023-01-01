@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap");
+
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--bg: #0c0c0d;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg);
+}
+
+h1 {
+	--stretch-multiplier: 4;
+	font-size: clamp(2rem, 14vmin, 8rem);
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	display: grid;
+	line-height: 1;
+}
+
+span {
+	color: var(--purple);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+[aria-hidden] {
+	display: flex;
+	gap: 0.02ch;
+	align-items: center;
+}
+
+.stretch-o {
+	height: 0.6ch;
+	width: calc(var(--stretch) * 0.6ch);
+	border: 0.25ch solid var(--purple);
+	border-radius: 1ch;
+	transition: width 0.2s;
+	position: relative;
+}
+
+h1 {
+	--stretch: 1;
+}
+
+h1:hover {
+	--stretch: var(--stretch-multiplier);
+}
+
+.stretch-o:after,
+.stretch-o:before {
+	content: "";
+	border: 0.25ch solid var(--color);
+	position: absolute;
+	inset: -0.25ch;
+	border-radius: 1ch;
+	opacity: calc(-1 + var(--stretch));
+	transition: opacity 0.2s;
+}
+
+.stretch-o:before {
+	--color: var(--yellow);
+}
+
+.stretch-o:after {
+	--color: var(--green);
+	-webkit-mask: radial-gradient(circle at top left, black, transparent), radial-gradient(circle at bottom left, black, transparent);
+}
