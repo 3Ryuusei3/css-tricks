@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--light-yellow: #fefbf6;
+	--green: #73c08c;
+	--purple: #956cae;
+	--black: #2a2438;
+	--slake: #6058f8;
+
+	/* Font */
+	font-family: "Popins", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: linear-gradient(var(--purple) 50%, var(--green) 50%);
+}
+
+.card {
+	position: relative;
+	width: 300px;
+	height: 350px;
+	box-shadow: 0 0px 30px 10px rgba(0, 0, 0, 0.3);
+	display: flex;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+	border-radius: 8px;
+}
+
+.card:hover {
+	width: 600px;
+}
+
+.card .imgContainer {
+	position: relative;
+	min-width: 300px;
+	height: 100%;
+	background: var(--light-yellow);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.card .imgContainer img {
+	max-width: 250px;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover .imgContainer img {
+	transform: rotate(-25deg) translate(-20px);
+}
+
+.card .details {
+	position: absolute;
+	left: 0;
+	min-width: 300px;
+	height: 100%;
+	background: var(--yellow);
+	display: flex;
+	justify-content: center;
+	padding: 24px;
+	flex-direction: column;
+	z-index: 1;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover .details {
+	left: 300px;
+}
+
+.card .details h3 {
+	color: var(--light-yellow);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+
+.card .details h3 span {
+	font-size: 0.65em;
+	font-weight: 300;
+	text-transform: none;
+	opacity: 0.85;
+}
+
+.card .details h4 {
+	color: var(--light-yellow);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-weight: 0.9em;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height: 1em;
+}
+
+.card .details p {
+	color: var(--light-yellow);
+	opacity: 0.65;
+	font-size: 0.8em;
+}
+
+.card .details .size {
+	display: flex;
+	gap: 12px;
+}
+
+.card .details .size li {
+	list-style: none;
+	color: var(--light-yellow);
+	font-size: 0.9em;
+	width: 40px;
+	height: 40px;
+	border: 2px solid var(--light-yellow);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	opacity: 0.65;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+.card .details .size li:hover {
+	color: var(--black);
+	background: var(--light-yellow);
+	opacity: 1;
+}
+
+.card .details .group {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	margin-top: 20px;
+}
+
+.card .details .group h2 {
+	color: var(--light-yellow);
+	font-weight: 600;
+	font-size: 2em;
+}
+
+.card .details .group h2 small {
+	font-size: 0.75em;
+}
+
+.card .details .group a {
+	display: inline-flex;
+	padding: 10px 20px;
+	background: var(--light-yellow);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 8px;
+	color: var(--black);
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+	transition: 0.3s;
+}
+
+.card .details .group a:hover {
+	background: var(--black);
+	color: var(--light-yellow);
+}
+
+.tag {
+	position: absolute;
+	bottom: 8px;
+	right: 10px;
+	color: var(--yellow);
+	font-size: 1rem;
+	font-weight: 600;
+	filter: drop-shadow(0px 0px 1px black);
+}
