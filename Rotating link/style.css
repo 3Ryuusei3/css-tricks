@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--slake);
+	font-family: "Montserrat", sans-serif;
+}
+
+.link {
+	width: 12rem;
+	height: 12rem;
+	display: inline-block;
+	font-size: 1.2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.1175em;
+	word-spacing: 0.3em;
+	transition: 0.4s ease;
+}
+.link__svg {
+	width: 100%;
+	height: auto;
+	transform-box: fill-box;
+	fill: white;
+	stroke: white;
+	stroke-width: 0.05em;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.link__text {
+	-webkit-animation: rotateReverse normal infinite 20s linear;
+	animation: rotateReverse normal infinite 20s linear;
+	transform-origin: 50% 50%;
+}
+
+.link:hover .link__text {
+	-webkit-animation: rotate normal infinite 40s linear;
+	animation: rotate normal infinite 40s linear;
+}
+
+.link:hover {
+	width: 13rem;
+	height: 13rem;
+	transition: 0.4s ease;
+}
+
+.link:hover .link__svg {
+	stroke-width: 0.1em;
+	transition: 0.4s ease;
+}
+
+@-webkit-keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rotateReverse {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+@keyframes rotateReverse {
+	to {
+		transform: rotate(-360deg);
+	}
+}
