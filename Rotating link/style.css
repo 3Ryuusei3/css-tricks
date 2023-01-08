@@ -6,6 +6,9 @@
 	--green: #73c08c;
 	--purple: #956cae;
 	--slake: #6058f8;
+
+	/* Font */
+	font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -17,13 +20,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--slake);
-	font-family: "Montserrat", sans-serif;
 }
 
 .link {
 	width: 12rem;
 	height: 12rem;
-	display: inline-block;
 	font-size: 1.2rem;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -49,8 +50,8 @@ body {
 }
 
 .link:hover .link__text {
-	-webkit-animation: rotate normal infinite 40s linear;
-	animation: rotate normal infinite 40s linear;
+	-webkit-animation: rotate normal infinite 30s linear;
+	animation: rotate normal infinite 30s linear;
 }
 
 .link:hover {
@@ -75,11 +76,13 @@ body {
 		transform: rotate(360deg);
 	}
 }
+
 @-webkit-keyframes rotateReverse {
 	to {
 		transform: rotate(-360deg);
 	}
 }
+
 @keyframes rotateReverse {
 	to {
 		transform: rotate(-360deg);
