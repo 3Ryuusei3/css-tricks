@@ -1,0 +1,40 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--_g: white 0 7px, #ffffff00 0 13px;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: var(--slake);
+	font-family: sans-serif;
+}
+
+nav {
+	display: flex;
+}
+
+ul {
+	margin: 0 0 0 auto;
+	padding: 20px;
+	display: flex;
+	list-style: none;
+}
+ul li a {
+	padding: 0.3em 0.8em 1.2em;
+	display: block;
+	color: white;
+	font: 500 22px/1.5em;
+	text-decoration: none;
+	border-bottom: 2px solid #ffffff00;
+}
+a:hover {
+	background: repeating-linear-gradient(90deg, var(--_g)) bottom/100% 2px no-repeat content-box, repeating-linear-gradient(0deg, var(--_g)) bottom/2px 1.2em no-repeat;
+	border-image: repeating-linear-gradient(-90deg, white 0 14px, #ffffff00 0 26px) 0 0 1 0/ 0 calc(50% - 1px) 2px 0/ 0 100vw;
+}
