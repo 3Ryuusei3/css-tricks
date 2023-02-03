@@ -1,0 +1,46 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--bg: #9990ff;
+	--slakeircle-bg: #ffefdf;
+
+	/* Image */
+	--s: 220px; /* image size */
+	--b: 6px; /* border thickness */
+	--f: 1; /* initial scale */
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg);
+	font-family: sans-serif;
+}
+
+img {
+	width: 220px;
+	aspect-ratio: 1;
+	padding: calc(var(--s) / 5) calc(var(--s) / 10) calc(var(--s) / 10);
+	cursor: pointer;
+	border-radius: 0 0 999px 999px;
+	--_g: 50% / calc(100% / var(--f)) 100% no-repeat content-box;
+	--_o: calc((1 / var(--f) - 1) * var(--s) / 2 - var(--b));
+	outline: var(--b) solid var(--slake);
+	outline-offset: var(--_o);
+	background: radial-gradient(circle closest-side, var(--slakeircle-bg) calc(99% - var(--b)), var(--slake) calc(100% - var(--b)) 99%, #0000) var(--_g);
+	mask: linear-gradient(#000 0 0) no-repeat 50% calc(1px - var(--_o)) / calc(100% / var(--f) - 2 * var(--b) - 2px) 50%, radial-gradient(circle closest-side, #000 99%, #0000) var(--_g);
+	-webkit-mask: linear-gradient(#000 0 0) no-repeat 50% calc(1px - var(--_o)) / calc(100% / var(--f) - 2 * var(--b) - 2px) 50%, radial-gradient(circle closest-side, #000 99%, #0000) var(--_g);
+	transform: scale(var(--f));
+	transition: 0.5s;
+}
+img:hover {
+	--f: 1.2;
+}
