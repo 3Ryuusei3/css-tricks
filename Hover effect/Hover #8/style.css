@@ -1,0 +1,41 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--b: 0.1em; /* the thickness of the line */
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	font-size: 50px;
+	background: conic-gradient(from -45deg at 50% calc(5 * 100% / 6), #fff 90deg, #000 0) calc(0 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(5 * 100% / 6), #000 90deg, #ffff 0) calc(0 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(4 * 100% / 6), #fff 90deg, #000 0) calc(1 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(4 * 100% / 6), #000 90deg, #ffff 0) calc(1 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(3 * 100% / 6), #fff 90deg, #000 0) calc(2 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(3 * 100% / 6), #000 90deg, #ffff 0) calc(2 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(2 * 100% / 6), #fff 90deg, #000 0) calc(3 * 100% / 3) var(--_d, 100%),
+		conic-gradient(from -45deg at 50% calc(2 * 100% / 6), #000 90deg, #ffff 0) calc(3 * 100% / 3) var(--_d, 100%);
+	-webkit-background-clip: text, padding-box;
+	background-clip: text, padding-box;
+	background-size: calc(100% / 4) 600%;
+	background-repeat: no-repeat;
+	transition: 1s linear;
+}
+a:hover {
+	--_d: 0%;
+}
