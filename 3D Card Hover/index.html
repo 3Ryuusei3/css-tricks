@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>3D Card Hover</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="card">
+			<img src="./pic.jpeg" alt="Manu and his cat" />
+		</div>
+		<script>
+			const CARD = document.querySelector(".card")
+			const UPDATE = ({ x, y }) => {
+				const BOUNDS = CARD.getBoundingClientRect()
+				// Calculate the range between the center and the pointer position.
+				const posX = x - BOUNDS.x
+				const posY = y - BOUNDS.y
+				const ratioX = posX / BOUNDS.width
+				const ratioY = posY / BOUNDS.height
+
+				CARD.style.setProperty("--ratio-x", ratioX)
+				CARD.style.setProperty("--ratio-y", ratioY)
+			}
+			document.body.addEventListener("pointermove", UPDATE)
+		</script>
+	</body>
+</html>
