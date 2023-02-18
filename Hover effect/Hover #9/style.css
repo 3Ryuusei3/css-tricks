@@ -1,0 +1,45 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--bg: ;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+a {
+	--c: #1095c1; /* the color */
+	--s: 0.15em;
+	color: #000;
+	text-decoration: none;
+	line-height: 1.1em;
+	padding-bottom: calc(2.1 * var(--s));
+	background: conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0 bottom var(--s) / calc(2 * var(--s)) var(--s) repeat-x,
+		conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s) bottom 0 / calc(2 * var(--s)) var(--s) repeat-x;
+}
+
+a:hover {
+	color: var(--c);
+}
+
+a {
+	mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
+	-webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) 0 / var(--_p, 0%) padding-box no-repeat;
+	transition: 0.5s;
+}
+a:hover {
+	--_p: 100%;
+}
