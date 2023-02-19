@@ -1,0 +1,36 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--bg: ;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+
+.noise {
+	align-items: center;
+	display: flex;
+	padding: 1.5rem 2.5rem;
+	width: 600px;
+	height: 250px;
+	background: linear-gradient(100deg, black, transparent), url(https://grainy-gradients.vercel.app/noise.svg);
+	filter: contrast(170%) brightness(1000%);
+}
+
+.noise h1 {
+	color: #fff;
+	font-size: 2rem;
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+	width: 50%;
+}
