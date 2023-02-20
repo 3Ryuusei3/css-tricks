@@ -1,0 +1,34 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.gradient-pattern {
+	animation: gradient 4s ease infinite;
+	background-image: linear-gradient(135deg, var(--green), var(--purple));
+	background-size: 400% 400%;
+	height: 100%;
+	width: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 51% 0%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 51% 0%;
+	}
+}
