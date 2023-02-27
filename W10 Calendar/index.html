@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>W10 Calendar</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div>
+			<div class="date-container"></div>
+		</div>
+		<script>
+			const dateContainer = document.querySelector(".date-container")
+
+			document.body.onmousemove = e => {
+				for (const date of document.getElementsByClassName("date")) {
+					const rect = date.getBoundingClientRect(),
+						x = e.clientX - rect.left,
+						y = e.clientY - rect.top
+
+					date.style.setProperty("--mouse-x", `${x}px`)
+					date.style.setProperty("--mouse-y", `${y}px`)
+				}
+			}
+
+			const days = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
+
+			days.map((day, index) => {
+				const dayElement = `
+					<div class="day">
+					${day}
+					</div>
+				`
+
+				dateContainer.insertAdjacentHTML("afterbegin", dayElement)
+			})
+
+			for (let i = 0; i < 31; i++) {
+				const dateElement = `
+					<div class="date">
+					<div class="content">${i + 1}</div>
+					</div>
+				`
+
+				dateContainer.insertAdjacentHTML("beforeend", dateElement)
+			}
+		</script>
+	</body>
+</html>

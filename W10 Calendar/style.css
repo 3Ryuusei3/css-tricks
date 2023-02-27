@@ -1,0 +1,67 @@
+:root {
+	/* Colors */
+	--yellow: #f4c869;
+	--green: #73c08c;
+	--purple: #956cae;
+	--slake: #6058f8;
+	--bg: #111;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg);
+	font-family: sans-serif;
+	color: white;
+	overflow: hidden;
+}
+
+.date-container {
+	gap: 8px;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	width: min(90%, 300px);
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 50px;
+	height: 50px;
+}
+
+.date:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.date::after {
+	content: "";
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	transition: opacity 500ms;
+	width: 100%;
+	background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.6), transparent 20%);
+	z-index: 1;
+}
+
+.date > .content {
+	background-color: #111;
+	inset: 2px;
+	position: absolute;
+	z-index: 2;
+}
+
+.day,
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
